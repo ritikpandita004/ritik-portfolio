@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ritik Pandita — Full Stack Developer. 3+ years building scalable backends, payment integrations and full-stack products with Laravel & Angular." />
+  <meta name="author" content="Ritik Pandita" />
+  <title>Ritik Pandita — Full Stack Developer</title>
+
+  <meta property="og:title" content="Ritik Pandita — Full Stack Developer" />
+  <meta property="og:description" content="3+ years building scalable backends, payment integrations and full-stack products with Laravel & Angular." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;450;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%237c5cff'/%3E%3Ctext x='50' y='68' font-family='Arial' font-size='52' font-weight='bold' fill='white' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <!-- ============ BACKGROUND FX ============ -->
+  <div class="bg-fx" aria-hidden="true">
+    <canvas id="particles"></canvas>
+    <div class="blob blob--1"></div>
+    <div class="blob blob--2"></div>
+    <div class="blob blob--3"></div>
+    <div class="grid-overlay"></div>
+    <div class="grain"></div>
+  </div>
+
+  <!-- ============ CUSTOM CURSOR ============ -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+  <!-- ============ SCROLL PROGRESS ============ -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__mark">
+      <span class="preloader__brace">&lt;</span>
+      <span class="preloader__name">RP</span>
+      <span class="preloader__brace">/&gt;</span>
+    </div>
+    <div class="preloader__bar"><span></span></div>
+  </div>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav" id="nav">
+    <a href="#home" class="nav__logo" aria-label="Home">
+      <span class="nav__logo-mark nav__logo-mark--photo"><img src="assets/img/profile.png" alt="Ritik Pandita" /></span>
+      <span class="nav__logo-text">Ritik Pandita</span>
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#home" class="nav__link is-active">Home</a>
+      <a href="#about" class="nav__link">About</a>
+      <a href="#skills" class="nav__link">Skills</a>
+      <a href="#experience" class="nav__link">Experience</a>
+      <a href="#projects" class="nav__link">Projects</a>
+      <a href="#contact" class="nav__link">Contact</a>
+    </nav>
+    <a href="#contact" class="nav__cta btn btn--ghost">Let's talk</a>
+    <button class="nav__burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero section" id="home">
+      <div class="hero__inner">
+        <div class="hero__copy">
+          <p class="hero__eyebrow reveal" data-reveal>
+            <span class="ping"></span> Available for freelance &amp; full-time
+          </p>
+          <h1 class="hero__title reveal" data-reveal>
+            <span class="hero__hi">Hi, I'm</span>
+            <span class="hero__name gradient-text">Ritik Pandita</span>
+          </h1>
+          <h2 class="hero__role reveal" data-reveal>
+            <span class="hero__role-static">A</span>
+            <span class="hero__rotator" id="rotator" aria-live="polite"></span>
+          </h2>
+          <p class="hero__desc reveal" data-reveal>
+           Full Stack Developer with <strong>3+ years</strong> of experience building
+            scalable backends, payment integrations and full-stack products — from live
+            operations platforms to nationwide listing systems.
+          </p>
+          <div class="hero__actions reveal" data-reveal>
+            <a href="#projects" class="btn btn--primary" data-magnetic>
+              View my work
+              <svg viewBox="0 0 24 24" class="btn__icon"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="assets/docs/Ritik-Pandita-Resume.pdf" download="Ritik-Pandita-Resume.pdf" class="btn btn--resume" data-magnetic>
+              <svg viewBox="0 0 24 24" class="btn__icon"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Download resume
+            </a>
+            <a href="#contact" class="btn btn--ghost" data-magnetic>Get in touch</a>
+          </div>
+          <div class="hero__socials reveal" data-reveal>
+            <a href="mailto:ritikpandita004@gmail.com" class="social" aria-label="Email" data-tip="Email">
+              <svg viewBox="0 0 24 24"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </a>
+            <a href="tel:+919149541072" class="social" aria-label="Phone" data-tip="Call">
+              <svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1z" fill="currentColor"/></svg>
+            </a>
+            <a href="https://medium.com/@ritikpandita004" target="_blank" rel="noopener" class="social" aria-label="Medium" data-tip="Medium">
+              <svg viewBox="0 0 24 24"><path d="M4 7.5c0-.3-.1-.6-.35-.8L2 5v-.3h4.9l3.8 8.3 3.3-8.3H19V5l-1.4 1.3a.4.4 0 0 0-.15.4v9.6a.4.4 0 0 0 .15.4L19 18v.3h-6.6V18l1.45-1.35c.15-.15.15-.2.15-.4V8.4l-4 10H9L4.6 8.4v6.65c-.04.3.06.6.27.82L6.7 18v.3H2V18l1.83-2.1c.2-.22.3-.53.25-.83z" fill="currentColor"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Orbit visual -->
+        <div class="hero__visual reveal" data-reveal>
+          <div class="orbit">
+            <div class="orbit__glow"></div>
+            <div class="orbit__ring orbit__ring--1"></div>
+            <div class="orbit__ring orbit__ring--2"></div>
+            <div class="orbit__ring orbit__ring--3"></div>
+
+            <div class="orbit__avatar">
+              <img src="assets/img/profile.png" alt="Ritik Pandita" width="220" height="220" />
+              <span class="orbit__status"><span class="ping"></span></span>
+            </div>
+
+            <!-- floating tech chips -->
+            <span class="tech tech--1" style="--c:#8b6cff"><span class="tech__dot"></span> Laravel</span>
+            <span class="tech tech--2" style="--c:#8a91ff"><span class="tech__dot"></span> PHP</span>
+            <span class="tech tech--3" style="--c:#f7df1e"><span class="tech__dot"></span> JavaScript</span>
+            <span class="tech tech--4" style="--c:#dd0031"><span class="tech__dot"></span> Angular</span>
+            <span class="tech tech--5" style="--c:#ff9d3c"><span class="tech__dot"></span> AWS</span>
+            <span class="tech tech--6" style="--c:#38bdf8"><span class="tech__dot"></span> SQL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- stats strip -->
+      <div class="hero__stats reveal" data-reveal>
+        <div class="stat"><span class="stat__num" data-count="3" data-suffix="+">0</span><span class="stat__label">Years experience</span></div>
+        <div class="stat"><span class="stat__num" data-count="6" data-suffix="+">0</span><span class="stat__label">Products shipped</span></div>
+        <div class="stat"><span class="stat__num" data-count="270" data-suffix="+">0</span><span class="stat__label">Downtowns served</span></div>
+        <div class="stat"><span class="stat__num" data-count="100" data-suffix="%">0</span><span class="stat__label">Ownership mindset</span></div>
+      </div>
+
+      <a href="#about" class="hero__scroll" aria-label="Scroll down">
+        <span class="mouse"><span></span></span>
+        <span class="hero__scroll-txt">Scroll</span>
+      </a>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about">
+      <div class="section__head reveal" data-reveal>
+        <span class="section__kicker"><span class="section__num">01</span> About</span>
+        <h2 class="section__title">Backend that <span class="gradient-text">just works.</span></h2>
+      </div>
+
+      <div class="about__grid">
+        <div class="about__bio reveal" data-reveal>
+          <p class="about__lead">
+            I'm a <strong> Full Stack Developer </strong> who loves turning messy business
+            problems into clean, dependable systems.
+          </p>
+          <p>
+            Over the last 3+ years I've built the pieces users never see but always feel —
+            payment flows, subscription billing, role-based access, mapping engines and
+            REST APIs that power web and mobile apps. I currently build
+            <a href="https://coreboard.ai" target="_blank" rel="noopener" class="link">CoreBoard</a>,
+            a live operations platform, at Absoft IT Solutions.
+          </p>
+          <p>
+            I care about code that's readable, APIs that are predictable, and shipping
+            features that hold up in production. Comfortable owning a feature end-to-end,
+            collaborating across the stack with Angular and Flutter teams, and deploying on AWS.
+          </p>
+
+          <div class="about__facts">
+            <div class="fact"><span class="fact__k">Role</span><span class="fact__v">Full Stack Developer</span></div>
+            <div class="fact"><span class="fact__k">Experience</span><span class="fact__v">3+ Years</span></div>
+            <div class="fact"><span class="fact__k">Education</span><span class="fact__v">B.Tech CSE — Chandigarh University</span></div>
+            <div class="fact"><span class="fact__k">Focus</span><span class="fact__v">Backend · APIs · Payments</span></div>
+          </div>
+        </div>
+
+        <div class="about__cards">
+          <article class="feature-card reveal" data-reveal style="--accent:#8b6cff">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24"><path d="M8 6 3 12l5 6M16 6l5 6-5 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Backend Engineering</h3>
+            <p>Robust Laravel services, clean data models, queues, and REST APIs consumed by web &amp; mobile clients.</p>
+          </article>
+          <article class="feature-card reveal" data-reveal style="--accent:#22d3ee">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10M12 2v10l7 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Payments &amp; Billing</h3>
+            <p>Stripe subscriptions with auto-renewal and Razorpay checkout — built for real revenue, not demos.</p>
+          </article>
+          <article class="feature-card reveal" data-reveal style="--accent:#34d399">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Full-Stack Collaboration</h3>
+            <p>Shipping features with Angular and Flutter front-ends, and deploying to AWS.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section skills" id="skills">
+      <div class="section__head reveal" data-reveal>
+        <span class="section__kicker"><span class="section__num">02</span> Skills</span>
+        <h2 class="section__title">My <span class="gradient-text">toolkit</span></h2>
+        <p class="section__sub">The stack I reach for to design, build and ship.</p>
+      </div>
+
+      <div class="skills__grid">
+        <article class="skill-cat reveal" data-reveal>
+          <header class="skill-cat__head"><span class="dot" style="--c:#8b6cff"></span> Languages</header>
+          <ul class="skill-cat__list">
+            <li><span>PHP</span><i data-level="95"></i></li>
+            <li><span>JavaScript</span><i data-level="82"></i></li>
+            <li><span>SQL</span><i data-level="88"></i></li>
+            <li><span>HTML &amp; CSS</span><i data-level="90"></i></li>
+          </ul>
+        </article>
+        <article class="skill-cat reveal" data-reveal>
+          <header class="skill-cat__head"><span class="dot" style="--c:#22d3ee"></span> Frameworks</header>
+          <ul class="skill-cat__list">
+            <li><span>Laravel</span><i data-level="95"></i></li>
+            <li><span>Angular</span><i data-level="75"></i></li>
+            <li><span>Bootstrap</span><i data-level="88"></i></li>
+            <li><span>REST APIs</span><i data-level="90"></i></li>
+          </ul>
+        </article>
+        <article class="skill-cat reveal" data-reveal>
+          <header class="skill-cat__head"><span class="dot" style="--c:#34d399"></span> Data &amp; Cloud</header>
+          <ul class="skill-cat__list">
+            <li><span>MySQL</span><i data-level="90"></i></li>
+            <li><span>PostgreSQL</span><i data-level="82"></i></li>
+            <li><span>AWS</span><i data-level="72"></i></li>
+            <li><span>Git</span><i data-level="85"></i></li>
+          </ul>
+        </article>
+        <article class="skill-cat reveal" data-reveal>
+          <header class="skill-cat__head"><span class="dot" style="--c:#f472b6"></span> Integrations</header>
+          <ul class="skill-cat__list">
+            <li><span>Stripe</span><i data-level="88"></i></li>
+            <li><span>Razorpay</span><i data-level="85"></i></li>
+            <li><span>Zoho</span><i data-level="80"></i></li>
+            <li><span>Maps / GIS</span><i data-level="72"></i></li>
+          </ul>
+        </article>
+      </div>
+
+      <!-- marquee -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>PHP</span><span>Laravel</span><span>MySQL</span><span>PostgreSQL</span><span>JavaScript</span><span>Angular</span><span>AWS</span><span>Stripe</span><span>Razorpay</span><span>REST APIs</span><span>Bootstrap</span><span>Zoho</span><span>Flutter API</span><span>Git</span>
+          <span>PHP</span><span>Laravel</span><span>MySQL</span><span>PostgreSQL</span><span>JavaScript</span><span>Angular</span><span>AWS</span><span>Stripe</span><span>Razorpay</span><span>REST APIs</span><span>Bootstrap</span><span>Zoho</span><span>Flutter API</span><span>Git</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section experience" id="experience">
+      <div class="section__head reveal" data-reveal>
+        <span class="section__kicker"><span class="section__num">03</span> Experience</span>
+        <h2 class="section__title">Where I've <span class="gradient-text">built</span></h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline__line"><span class="timeline__progress" id="tlProgress"></span></div>
+
+        <article class="tl-item reveal" data-reveal>
+          <span class="tl-item__dot"></span>
+          <div class="tl-item__card">
+            <div class="tl-item__top">
+              <span class="tl-item__badge tl-item__badge--now">Current</span>
+              <span class="tl-item__date">May 2025 — Present</span>
+            </div>
+            <h3 class="tl-item__role">PHP Laravel Developer</h3>
+            <p class="tl-item__org">Absoft IT Solutions · India's leading Zoho Premium Partner</p>
+            <ul class="tl-item__points">
+              <li>Building <strong>CoreBoard</strong> — a live operations platform for capacity, delivery &amp; meeting intelligence.</li>
+              <li>Developing Laravel services and dashboards integrated with Zoho Projects.</li>
+              <li>Automating business processes and building client-ready reporting.</li>
+            </ul>
+            <div class="tl-item__tags"><span>Laravel</span><span>MySQL</span><span>Zoho</span><span>REST APIs</span></div>
+          </div>
+        </article>
+
+        <article class="tl-item reveal" data-reveal>
+          <span class="tl-item__dot"></span>
+          <div class="tl-item__card">
+            <div class="tl-item__top">
+              <span class="tl-item__badge">1.7 yrs</span>
+              <span class="tl-item__date">Sept 2023 — May 2025</span>
+            </div>
+            <h3 class="tl-item__role">PHP Laravel Developer</h3>
+            <p class="tl-item__org">Infostride Technologies</p>
+            <ul class="tl-item__points">
+              <li>Shipped <strong>VegSpoons</strong> listing platform with Stripe subscriptions &amp; a mobile API layer.</li>
+              <li>Built <strong>Downtown TX / GA</strong> property platforms with map-based boundaries &amp; RBAC.</li>
+              <li>Delivered the <strong>ParkingNest</strong> Laravel backend with Razorpay payments.</li>
+            </ul>
+            <div class="tl-item__tags"><span>Laravel</span><span>PostgreSQL</span><span>Stripe</span><span>AWS</span></div>
+          </div>
+        </article>
+
+        <article class="tl-item reveal" data-reveal>
+          <span class="tl-item__dot"></span>
+          <div class="tl-item__card">
+            <div class="tl-item__top">
+              <span class="tl-item__badge tl-item__badge--edu">Education</span>
+              <span class="tl-item__date">2020 — 2023</span>
+            </div>
+            <h3 class="tl-item__role">B.Tech, Computer Science &amp; Engineering</h3>
+            <p class="tl-item__org">Chandigarh University · CGPA 7.18</p>
+            <ul class="tl-item__points">
+              <li>Foundations in data structures, databases, web &amp; software engineering.</li>
+            </ul>
+            <div class="tl-item__tags"><span>CSE</span><span>Web</span><span>Databases</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section projects" id="projects">
+      <div class="section__head reveal" data-reveal>
+        <span class="section__kicker"><span class="section__num">04</span> Projects</span>
+        <h2 class="section__title">Selected <span class="gradient-text">work</span></h2>
+        <p class="section__sub">Real products in production — click through to the live sites.</p>
+      </div>
+
+      <div class="projects__grid">
+        <!-- CoreBoard -->
+        <article class="project reveal is-featured" data-reveal data-tilt style="--accent:#8b6cff;--accent2:#22d3ee">
+          <div class="project__media">
+            <div class="mock">
+              <div class="mock__bar"><i></i><i></i><i></i><span class="mock__url">coreboard.ai</span><span class="mock__live">LIVE</span></div>
+              <div class="mock__body mock--dash">
+                <div class="mock__kpis">
+                  <div class="kpi"><b>271</b><small>Projects</small></div>
+                  <div class="kpi kpi--ok"><b>189</b><small>Delivered</small></div>
+                  <div class="kpi kpi--warn"><b>21</b><small>Overdue</small></div>
+                  <div class="kpi kpi--risk"><b>3</b><small>At risk</small></div>
+                </div>
+                <div class="mock__rows">
+                  <div class="mrow"><span class="mrow__av">AC</span><span class="mrow__bar" style="--w:78%"></span><em>78%</em></div>
+                  <div class="mrow"><span class="mrow__av">JL</span><span class="mrow__bar" style="--w:64%"></span><em>64%</em></div>
+                  <div class="mrow"><span class="mrow__av">PM</span><span class="mrow__bar mrow__bar--red" style="--w:40%"></span><em>bench</em></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project__body">
+            <div class="project__top">
+              <span class="project__tag">Live Operations Platform</span>
+              <span class="project__star">★ Featured</span>
+            </div>
+            <h3 class="project__title">CoreBoard</h3>
+            <p class="project__desc">One screen, zero blind spots. A live command center over people, projects &amp; meetings — project health, daily/weekly allocation, AI meeting minutes, smart alerts and client-ready reports.</p>
+            <div class="project__stack"><span>Laravel</span><span>MySQL</span><span>REST APIs</span><span>Zoho</span><span>JavaScript</span></div>
+            <a href="https://coreboard.ai" target="_blank" rel="noopener" class="project__link">Visit coreboard.ai <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </article>
+
+        <!-- VegSpoons -->
+        <article class="project reveal" data-reveal data-tilt style="--accent:#34d399;--accent2:#a3e635">
+          <div class="project__media">
+            <div class="mock">
+              <div class="mock__bar"><i></i><i></i><i></i><span class="mock__url">vegspoons.com</span><span class="mock__live">LIVE</span></div>
+              <div class="mock__body mock--listing">
+                <div class="lcard"><span class="lcard__img">🥗</span><span class="lcard__t"></span><span class="lcard__s"></span><span class="lbadge">PAID</span></div>
+                <div class="lcard"><span class="lcard__img">🍜</span><span class="lcard__t"></span><span class="lcard__s"></span><span class="lbadge lbadge--pend">PENDING</span></div>
+                <div class="lcard"><span class="lcard__img">🥑</span><span class="lcard__t"></span><span class="lcard__s"></span><span class="lbadge lbadge--draft">DRAFT</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="project__body">
+            <div class="project__top">
+              <span class="project__tag">Business Listing Platform</span>
+              <span class="project__star">★ Featured</span>
+            </div>
+            <h3 class="project__title">VegSpoons</h3>
+            <p class="project__desc">Australia's plant-based food directory. Built the full listing workflow (draft → pending → paid), Stripe subscriptions with auto-renewal, a mobile API layer and multi-profile accounts.</p>
+            <div class="project__stack"><span>Laravel</span><span>MySQL</span><span>Stripe</span><span>AWS</span><span>JavaScript</span></div>
+            <a href="https://vegspoons.com" target="_blank" rel="noopener" class="project__link">Visit vegspoons.com <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Absoft -->
+        <article class="project reveal" data-reveal data-tilt style="--accent:#38bdf8;--accent2:#6366f1">
+          <div class="project__media">
+            <div class="mock">
+              <div class="mock__bar"><i></i><i></i><i></i><span class="mock__url">absoft.io</span><span class="mock__live">LIVE</span></div>
+              <div class="mock__body mock--site">
+                <div class="site__hero"><span class="site__h1"></span><span class="site__h2"></span><span class="site__btn">Book Demo</span></div>
+                <div class="site__stats"><span><b>309+</b>automated</span><span><b>98%</b>retention</span><span><b>14+</b>industries</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="project__body">
+            <div class="project__top">
+              <span class="project__tag">Corporate Website</span>
+            </div>
+            <h3 class="project__title">Absoft IT Solutions</h3>
+            <p class="project__desc">The web presence for India's leading Zoho Premium Partner. Responsive, animated marketing pages showcasing automation services, industry solutions and lead capture.</p>
+            <div class="project__stack"><span>Laravel</span><span>JavaScript</span><span>HTML/CSS</span><span>Bootstrap</span></div>
+            <a href="https://absoft.io" target="_blank" rel="noopener" class="project__link">Visit absoft.io <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Downtown TX -->
+        <article class="project reveal" data-reveal data-tilt style="--accent:#fb923c;--accent2:#f59e0b">
+          <div class="project__media">
+            <div class="mock">
+              <div class="mock__bar"><i></i><i></i><i></i><span class="mock__url">downtowntx.org</span><span class="mock__live">LIVE</span></div>
+              <div class="mock__body mock--map">
+                <div class="map__grid"></div>
+                <span class="pin pin--1"></span><span class="pin pin--2"></span><span class="pin pin--3"></span>
+                <div class="map__poly"></div>
+                <div class="map__card"><b>Historic Downtown</b><small>60+ Texas communities</small></div>
+              </div>
+            </div>
+          </div>
+          <div class="project__body">
+            <div class="project__top">
+              <span class="project__tag">Property Listing · GIS</span>
+            </div>
+            <h3 class="project__title">Downtown TX</h3>
+            <p class="project__desc">Real-estate discovery across 60+ historic Texas downtowns. Built community creation, property listings, map-based boundaries and role-based access. Backed by the Texas Historical Commission.</p>
+            <div class="project__stack"><span>Laravel</span><span>PostgreSQL</span><span>Maps</span><span>Bootstrap</span></div>
+            <a href="https://downtowntx.org" target="_blank" rel="noopener" class="project__link">Visit downtowntx.org <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Downtown GA -->
+        <article class="project reveal" data-reveal data-tilt style="--accent:#2dd4bf;--accent2:#22d3ee">
+          <div class="project__media">
+            <div class="mock">
+              <div class="mock__bar"><i></i><i></i><i></i><span class="mock__url">downtownga.com</span><span class="mock__live">LIVE</span></div>
+              <div class="mock__body mock--map mock--map2">
+                <div class="map__grid"></div>
+                <span class="pin pin--1"></span><span class="pin pin--2"></span><span class="pin pin--3"></span>
+                <div class="map__poly"></div>
+                <div class="map__card"><b>Historic Downtown</b><small>Georgia districts</small></div>
+              </div>
+            </div>
+          </div>
+          <div class="project__body">
+            <div class="project__top">
+              <span class="project__tag">Property Listing · GIS</span>
+            </div>
+            <h3 class="project__title">Downtown GA</h3>
+            <p class="project__desc">Sister platform bringing the same downtown discovery experience to Georgia's historic districts — powered by the shared listing &amp; mapping engine and a role-based admin.</p>
+            <div class="project__stack"><span>Laravel</span><span>PostgreSQL</span><span>Maps</span></div>
+            <a href="https://downtownga.com" target="_blank" rel="noopener" class="project__link">Visit downtownga.com <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </article>
+
+        <!-- ParkingNest -->
+        <article class="project reveal" data-reveal data-tilt style="--accent:#f472b6;--accent2:#fb7185">
+          <div class="project__media">
+            <div class="mock">
+              <div class="mock__bar"><i></i><i></i><i></i><span class="mock__url">ParkingNest · app</span><span class="mock__live mock__live--app">APP</span></div>
+              <div class="mock__body mock--app">
+                <div class="phone">
+                  <div class="phone__note"></div>
+                  <div class="phone__map"><span class="ppin"></span><span class="ppin ppin--2"></span></div>
+                  <div class="phone__sheet">
+                    <span class="phone__slot"></span>
+                    <span class="phone__pay">Pay ₹120 · Razorpay</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project__body">
+            <div class="project__top">
+              <span class="project__tag">Mobile App · Backend</span>
+              <span class="project__star project__star--app">Flutter + Laravel</span>
+            </div>
+            <h3 class="project__title">ParkingNest</h3>
+            <p class="project__desc">A parking-space booking app. Built the Laravel backend to manage listings and time slots, and integrated Razorpay for secure, smooth transactions. Flutter front-end.</p>
+            <div class="project__stack"><span>Laravel</span><span>Flutter</span><span>Razorpay</span><span>REST APIs</span></div>
+            <span class="project__link project__link--muted">Private client app</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="contact__card reveal" data-reveal>
+        <div class="contact__glow"></div>
+        <span class="section__kicker"><span class="section__num">05</span> Contact</span>
+        <h2 class="contact__title">Let's build something <span class="gradient-text">solid.</span></h2>
+        <p class="contact__sub">Have a backend to build, an API to tame, or a product to ship? I'm one message away.</p>
+
+        <div class="contact__actions">
+          <a href="mailto:ritikpandita004@gmail.com" class="btn btn--primary btn--lg" data-magnetic>
+            <svg viewBox="0 0 24 24" class="btn__icon"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            ritikpandita004@gmail.com
+          </a>
+          <a href="assets/docs/Ritik-Pandita-Resume.pdf" download="Ritik-Pandita-Resume.pdf" class="btn btn--resume btn--lg" data-magnetic>
+            <svg viewBox="0 0 24 24" class="btn__icon"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Download resume
+          </a>
+        </div>
+
+        <div class="contact__grid">
+          <a href="tel:+919149541072" class="contact__item" data-magnetic>
+            <span class="contact__ic"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1z" fill="currentColor"/></svg></span>
+            <span class="contact__meta"><small>Phone</small><b>+91 91495 41072</b></span>
+          </a>
+          <a href="mailto:ritikpandita004@gmail.com" class="contact__item" data-magnetic>
+            <span class="contact__ic"><svg viewBox="0 0 24 24"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+            <span class="contact__meta"><small>Email</small><b>ritikpandita004@gmail.com</b></span>
+          </a>
+          <a href="https://medium.com/@ritikpandita004" target="_blank" rel="noopener" class="contact__item" data-magnetic>
+            <span class="contact__ic"><svg viewBox="0 0 24 24"><path d="M4 7.5c0-.3-.1-.6-.35-.8L2 5v-.3h4.9l3.8 8.3 3.3-8.3H19V5l-1.4 1.3a.4.4 0 0 0-.15.4v9.6a.4.4 0 0 0 .15.4L19 18v.3h-6.6V18l1.45-1.35c.15-.15.15-.2.15-.4V8.4l-4 10H9L4.6 8.4v6.65c-.04.3.06.6.27.82L6.7 18v.3H2V18l1.83-2.1c.2-.22.3-.53.25-.83z" fill="currentColor"/></svg></span>
+            <span class="contact__meta"><small>Medium</small><b>@ritikpandita004</b></span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <a href="#home" class="footer__logo"><span class="nav__logo-mark nav__logo-mark--photo"><img src="assets/img/profile.png" alt="Ritik Pandita" /></span> Ritik Pandita</a>
+      <p class="footer__tag">Full Stack Developer</p>
+      <nav class="footer__links">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <!-- <div class="footer__bottom">
+      <span class="footer__built">Designed &amp; built with <span class="heart">♥</span> and Laravel-grade care.</span>
+    </div> -->
+  </footer>
+
+  <a href="#home" class="to-top" id="toTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
