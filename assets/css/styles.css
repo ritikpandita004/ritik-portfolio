@@ -1,9 +1,4 @@
-/* =========================================================
-   Ritik Pandita — Portfolio
-   Dark / futuristic theme · glassmorphism · animated
-   ========================================================= */
 
-/* ---------- Tokens ---------- */
 :root {
   --bg: #06070e;
   --bg-2: #0a0c18;
@@ -602,7 +597,7 @@ body.hide-cursor .cursor-dot {
   position: absolute;
   inset: 0;
   width: 100%;
-  height: 100%;
+  height: 173%;
   object-fit: cover;
   object-position: center 20%;
   border-radius: 9px;
